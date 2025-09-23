@@ -4,7 +4,7 @@
 	process = git-lfs filter-process
 	required = true
 [user]
-	email = patrick.bruns@offis.de
+	email = patrickbruns90@googlemail.com
 	name = Patrick Bruns
 [init]
 	defaultBranch = main
