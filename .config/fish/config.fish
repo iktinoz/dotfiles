@@ -1,3 +1,5 @@
+set -g theme_display_hostname yes
+
 if command -q fastfetch
    fastfetch
 end
