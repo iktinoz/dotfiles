@@ -1,4 +1,16 @@
+set -Ux EDITOR nano
+set -Ux VISUAL nano
 set -g theme_display_hostname yes
+
+function fish_title
+    
+    if set -q argv[1]
+        echo $argv[1]
+ 
+    else
+        prompt_pwd
+    end
+end
 
 if command -q fastfetch
    fastfetch
