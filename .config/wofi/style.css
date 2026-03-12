@@ -1,94 +1,60 @@
-/* Everforest */
-@define-color accent #A7C080;
-@define-color txt #D3C6AA;
-@define-color bg #2B3339;
-@define-color bg2 #333C43;
+@define-color bg rgba(39, 46, 51, 0.9);
+@define-color fg #d3c6aa;
+@define-color accent #a7c080;
+@define-color bg_alt rgba(52, 63, 68, 0.8);
+@define-color border #4f5b58;
 
- * {
-    font-family: 'CaskaydiaCove Nerd Font mono';
-    font-size: 14px;
- }
+* {
+    font-family: 'CaskaydiaCove Nerd Font';
+    font-size: 15px;
+}
 
- /* Window */
- window {
+window {
     margin: 0px;
-    padding: 10px;
-    border: 3px solid @accent;
-    border-radius: 7px;
+    padding: 12px;
+    border: 2px solid @accent;
+    border-radius: 10px;
     background-color: @bg;
-    animation: slideIn 0.5s ease-in-out both;
- }
+}
 
- /* Slide In */
- @keyframes slideIn {
-    0% {
-       opacity: 0;
-    }
-
-    100% {
-       opacity: 1;
-    }
- }
-
- /* Inner Box */
- #inner-box {
+#outer-box {
     margin: 5px;
-    padding: 10px;
     border: none;
-    background-color: @bg;
-    animation: fadeIn 0.5s ease-in-out both;
- }
+}
 
- /* Fade In */
- @keyframes fadeIn {
-    0% {
-       opacity: 0;
-    }
+#input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid @border;
+    border-radius: 6px;
+    color: @fg;
+    background-color: @bg_alt;
+}
 
-    100% {
-       opacity: 1;
-    }
- }
+#inner-box {
+    border: none;
+    background-color: transparent;
+}
 
- /* Outer Box */
- #outer-box {
+#text {
     margin: 5px;
+    color: @fg;
+}
+
+#img {
+    margin-right: 12px;
+}
+
+#entry {
     padding: 10px;
-    border: none;
-    background-color: @bg;
- }
+    border-radius: 6px;
+}
 
- /* Scroll */
- #scroll {
-    margin: 0px;
-    padding: 10px;
-    border: none;
- }
+#entry:selected {
+    background-color: @accent;
+}
 
- /* Input */
- #input {
-    margin: 5px;
-    padding: 10px;
-    border: none;
-    color: @accent;
-    background-color: @bg2;
-    animation: fadeIn 0.5s ease-in-out both;
- }
-
- /* Text */
- #text {
-    margin: 5px;
-    padding: 10px;
-    border: none;
-    color: @txt;
-    animation: fadeIn 0.5s ease-in-out both;
- }
-
- /* Selected Entry */
- #entry:selected {
-   background-color: @accent;
- }
-
- #entry:selected #text {
+#entry:selected #text {
     color: @bg;
- }
+    font-weight: bold;
+}
