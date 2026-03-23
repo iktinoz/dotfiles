@@ -1,6 +1,7 @@
 set -Ux EDITOR nano
 set -Ux VISUAL nano
 set -g theme_display_hostname yes
+set -gx TERM xterm-256color
 
 function fish_title
     
@@ -18,7 +19,9 @@ end
 
 if status is-interactive
    alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+   alias copilot='env KITTY_SHELL_INTEGRATION=0 copilot'
 end
+
 
 # Created by `pipx` on 2025-09-09 07:58:04
 set PATH $PATH /home/pbruns/.local/bin
