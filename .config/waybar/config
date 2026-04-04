@@ -1,7 +1,7 @@
 {
 	"modules-left": ["hyprland/workspaces", "hyprland/mode"],
 	"modules-center": ["clock", "idle_inhibitor"],
-	"modules-right": ["tray", "custom/spotify", "custom/scratchpad-indicator", "network","pulseaudio", "battery"],
+	"modules-right": ["tray", "custom/wireguard", "custom/scratchpad-indicator", "network","pulseaudio", "battery"],
 
 	"hyprland/mode": {
 		"format": "<span style=\"italic\">{}</span>"
@@ -13,6 +13,13 @@
 		"max-length": 50,
 		"on-click": "kitty -e 'nmtui'"
 	},
+    "custom/wireguard": {
+        "exec": "nmcli connection show wg0 | grep 'GENERAL.STATE' | grep -q 'activated' && echo ' VPN' || echo ' Off'",
+        "interval": 5,
+        "return-type": "text",
+        "on-click": "nmcli connection up wg0",
+        "on-click-right": "nmcli connection down wg0"
+    },
 	"idle_inhibitor": {
 		"format": "{icon}",
 		"format-icons": {

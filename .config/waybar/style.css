@@ -2,7 +2,7 @@
 border: none;
 font-family: Font Awesome, Roboto, Arial, sans-serif;
 font-size: 13px;
-color: #ffffff;
+color: #D3C6AA;
 border-radius: 20px;
 }
 
@@ -14,16 +14,16 @@ window#waybar {
 }
 /*-----module groups----*/
 .modules-right {
-	background-color: rgba(0,43,51,0.85);
+	background-color: rgba(45,53,59,0.85);
 	margin: 2px 10px 0 0;
 }
 .modules-center {
-	background-color: rgba(0,43,51,0.85);
+	background-color: rgba(45,53,59,0.85);
 	margin: 2px 0 0 0;
 }
 .modules-left {
 	margin: 2px 0 0 5px;
-	background-color: rgba(0,119,179,0.6);
+	background-color: rgba(52,63,68,0.7);
 }
 /*-----modules indv----*/
 #workspaces button {
@@ -32,11 +32,11 @@ background-color: transparent;
 }
 #workspaces button:hover {
 box-shadow: inherit;
-background-color: rgba(0,153,153,1);
+background-color: rgba(131,192,146,0.7);
 }
 
 #workspaces button.focused {
-background-color: rgba(0,43,51,0.85);
+background-color: rgba(61,72,77,0.85);
 }
 
 #clock,
@@ -56,38 +56,43 @@ background-color: rgba(0,43,51,0.85);
 padding: 0 10px;
 }
 #mode {
-color: #cc3436;
+color: #E67E80;
 font-weight: bold;
 }
 #custom-power {
-background-color: rgba(0,119,179,0.6);
+background-color: rgba(127,187,179,0.6);
 border-radius: 100px;
 margin: 5px 5px;
 padding: 1px 1px 1px 6px;
 }
 /*-----Indicators----*/
 #idle_inhibitor.activated {
-color: #2dcc36;
+color: #A7C080;
 }
 #pulseaudio.muted {
-color: #cc3436;
+color: #E67E80;
 }
 #battery.charging {
-color: #2dcc36;
+color: #A7C080;
 }
 #battery.warning:not(.charging) {
-color: #e6e600;
+color: #DBBC7F;
 }
 #battery.critical:not(.charging) {
-color: #cc3436;
+color: #E67E80;
 }
 #temperature.critical {
-color: #cc3436;
+color: #E67E80;
 }
-/*-----Colors----*/
+/*-----Colors (Everforest Dark)----*/
 /*
- * rgba(0,85,102,1),#005566 --> Indigo(dye)
- *rgba(0,43,51,1),#002B33 --> Dark Green
- *rgba(0,153,153,1),#009999 --> Persian Green
- *
+ * #2D353B bg0  --> Haupthintergrund
+ * #343F44 bg1  --> modules-left
+ * #3D484D bg2  --> focused workspace
+ * #D3C6AA fg   --> Text
+ * #A7C080 green --> aktiv/charging
+ * #83C092 aqua  --> hover
+ * #7FBBB3 blue  --> accent
+ * #E67E80 red   --> error/critical
+ * #DBBC7F yellow --> warning
  */
