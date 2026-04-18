@@ -6,7 +6,9 @@ end
 -- 2. Grundeinstellungen
 vim.opt.termguicolors = true
 vim.opt.number = true
+vim.opt.title = true 
 
+vim.opt.titlestring = "%{fnamemodify(getcwd(), ':t')}"
 -- 3. Everforest konfigurieren
 -- Da es im 'start'-Ordner liegt, ist es bereits im Runtimepath.
 -- Wir müssen nur die Optionen setzen, BEVOR wir es laden.
