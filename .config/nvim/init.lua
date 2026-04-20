@@ -50,7 +50,8 @@ vim.cmd.colorscheme("everforest")
       group_empty = true,
     },
     filters = {
-      dotfiles = true,
+      dotfiles = false,
+      git_ignored = false
     },
   }
   require("nvim-tree").setup(config)
